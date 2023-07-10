@@ -32,12 +32,13 @@ def generate_wav(text, speaker=1, filepath='./audio.wav'):
     )
 
     # 受け取った音声データをWAVファイルとして保存
-    wf = wave.open(filepath, 'wb')
-    wf.setnchannels(1)
-    wf.setsampwidth(2)
-    wf.setframerate(24000)
-    wf.writeframes(response2.content)
-    wf.close()
+    wf = wave.open(filepath, 'wb')  # WAVファイルを書き込みモードで開く（ファイルが存在しない場合は新規作成）
+    wf.setnchannels(1)              # WAVファイルのチャンネル数を設定（1はモノラル）
+    wf.setsampwidth(2)              # WAVファイルのサンプル幅を設定（2は16ビット）
+    wf.setframerate(24000)          # WAVファイルのサンプリングレートを設定（24000は24kHz）
+    wf.writeframes(response2.content)# 音声データをWAVファイルに書き込む
+    wf.close()                      # WAVファイルを閉じる（全ての操作が完了した後に行う）
+
 
 # 音声認識器を初期化
 recognizer = sr.Recognizer()
