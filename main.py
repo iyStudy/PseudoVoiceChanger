@@ -41,13 +41,13 @@ while True:
         try:
             # ユーザーが話すのを待つ
             audio = recognizer.listen(source)
-            print("<<音声の入力が終了しました。音声をテキストに変換しています。>>")
+            print("<<テキスト変換中>>")
             # Googleの音声認識APIを使用して音声をテキストに変換する
             # 言語を日本語に設定
             text = recognizer.recognize_google(audio, language='ja-JP')
             print("あなたが言ったこと：", text)
             # wavファイル作成
-            print("<<音声を変換します>>")
+            print("<<音声を変換中>>")
             generate_wav(text)
 
         except sr.UnknownValueError:
@@ -59,7 +59,7 @@ while True:
 
     # wavファイルを再生する
     try:
-        print("<< ♪変換した音声を再生します♪ >>")
+        print("<< ♪ 変換した音声を再生 ♪ >>")
         wave_file = wave.open("audio.wav", 'rb')
         audio_player = pyaudio.PyAudio()
         stream = audio_player.open(
