@@ -10,7 +10,7 @@
 ## 必要なライブラリ
 このスクリプトを実行するためには、以下のPythonライブラリが必要です：
 ~~~
-speech_recognition
+SpeechRecognition
 requests
 wave
 pyaudio
@@ -18,7 +18,7 @@ pyaudio
 これらのライブラリは、以下のpipコマンドでインストールできます：
 
 ~~~
-pip install speech_recognition requests wave pyaudio
+pip install SpeechRecognition requests wave pyaudio
 ~~~
 ## 注意事項
 VOICEVOXの音声合成エンジンおよびGoogleの音声認識APIは大量のリソースを消費する可能性があります。    
