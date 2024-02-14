@@ -18,7 +18,7 @@ pyaudio
 これらのライブラリは、以下のpipコマンドでインストールできます：
 
 ~~~
-pip install SpeechRecognition requests wave pyaudio
+pip install -r requirements.txt
 ~~~
 ## 注意事項
 VOICEVOXの音声合成エンジンおよびGoogleの音声認識APIは大量のリソースを消費する可能性があります。    

@@ -39,7 +39,7 @@ def generate_wav(text, speaker=1, filepath='./audio.wav'):
     wf.writeframes(response2.content)# 音声データをWAVファイルに書き込む
     wf.close()                      # WAVファイルを閉じる（全ての操作が完了した後に行う）
 
-
+    
 # 音声認識器を初期化
 recognizer = sr.Recognizer()
 
